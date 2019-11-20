@@ -62,7 +62,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfw-6M-NxM">
-                    <rect key="frame" x="38" y="295" width="105" height="27"/>
+                    <rect key="frame" x="38" y="295" width="79" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="连接"/>
                     <connections>
@@ -85,13 +85,12 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIX-lf-ZiD">
-                    <rect key="frame" x="196" y="293" width="105" height="30"/>
+                    <rect key="frame" x="196" y="293" width="78" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="断开连接">
                         <color key="titleColor" red="0.92089381413187044" green="0.11316818008438892" blue="0.17319102283610072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="connectAction:" destination="-1" eventType="touchUpInside" id="u1B-UR-ygP"/>
                         <action selector="disconnectAction:" destination="-1" eventType="touchUpInside" id="Wc1-zX-XgE"/>
                     </connections>
                 </button>
