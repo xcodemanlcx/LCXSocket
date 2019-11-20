@@ -78,6 +78,11 @@
     [_socketClient writeData:data];
 }
 
+- (IBAction)disconnectAction:(id)sender {
+    [_socketClient disconnect];
+}
+
+
 - (void)longConnectTimerAction
 {
     // 发送固定格式的数据

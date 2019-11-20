@@ -92,6 +92,7 @@
                     </state>
                     <connections>
                         <action selector="connectAction:" destination="-1" eventType="touchUpInside" id="u1B-UR-ygP"/>
+                        <action selector="disconnectAction:" destination="-1" eventType="touchUpInside" id="Wc1-zX-XgE"/>
                     </connections>
                 </button>
             </subviews>

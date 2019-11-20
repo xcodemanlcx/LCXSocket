@@ -21,20 +21,27 @@
 }
 
 - (void)connectToHost:(NSString *)host port:(UInt16)port{
+    if (!_clientSocket) return;
+    
     _host = host;
     _port = port;
     NSError *error = nil;
-    _isConnected = [_clientSocket  connectToHost:host onPort:port withTimeout:-1 error:&error];
+    _isConnected = [_clientSocket connectToHost:host onPort:port withTimeout:-1 error:&error];
 }
 
 - (void)writeData:(NSData *)data {
+    
+    if (!_clientSocket) return;
+
     // withTimeout -1 : 无穷大,一直等
     // tag : 消息标记
     [_clientSocket  writeData:data withTimeout:-1 tag:1];
 }
 
 - (void)disconnect {
-    [_clientSocket  disconnect];
+    if (!_clientSocket) return;
+    
+        [_clientSocket  disconnect];
 }
 
 #pragma mark - GCDAsyncSocketDelegate
