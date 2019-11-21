@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     
 // isShowClient:YES 客户端，NO 服务端
-    BOOL isShowClient = NO;
+    BOOL isShowClient = YES;
     NSString *className = isShowClient?@"ClientViewController":@"ServerViewController";
     Class class = NSClassFromString(className);
     UIViewController *vc = [(UIViewController *)[class alloc] initWithNibName:className bundle:nil];
