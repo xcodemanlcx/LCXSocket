@@ -1,34 +1,37 @@
 //
-//  SocketClient.h
+//  SocketServer.h
 //  LCXSocket
 //
-//  Created by leichunxiang on 2019/11/20.
+//  Created by lcx on 2019/11/21.
 //  Copyright © 2019 lcx. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "GCDAsyncSocket.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SocketClient : NSObject<GCDAsyncSocketDelegate>
-
+@interface SocketServer : NSObject
 
 #pragma mark - Socket
-@property (nonatomic, readonly,strong) GCDAsyncSocket *clientSocket;
+@property (nonatomic, readonly,strong) GCDAsyncSocket *serverSocket;
+@property (nonatomic, readonly,strong) NSMutableArray *clientSockets;
 @property (nonatomic, readonly, assign) UInt16 port;
 @property (nonatomic, readonly, strong) NSString *host;
 
 - (instancetype)initWithQueue:(dispatch_queue_t)queue;
 
-- (BOOL)connectToHost:(NSString *)host port:(UInt16)port;
+//开始服务：监听端口
+- (BOOL)startServiceOnPort:(UInt16)port;
 //发送消息
-- (void)writeData:(NSData *)data;
-
-- (void)disconnect;
+- (void)writeData:(NSData *)data toClient:(GCDAsyncSocket *)client;
+//停止服务
+- (void)stopService;
 
 #pragma mark - Block:GCDAsyncSocketDelegate
-//连接成功
-@property (nonatomic, copy) void (^socketConnect)(GCDAsyncSocket *sock,NSString *host,uint16_t port);
+
+//接受连接成功
+@property (nonatomic, copy) void (^socketAccept)(GCDAsyncSocket *sock,GCDAsyncSocket *newSocket) ;
 //读取消息
 @property (nonatomic, copy) void (^socketReadData)(GCDAsyncSocket *sock,NSData *data,long tag);
 //连接断开

@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ClientViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
-    ClientViewController *vc = [[ClientViewController alloc] initWithNibName:@"ClientViewController" bundle:nil];
+// isShowClient:YES 客户端，NO 服务端
+    BOOL isShowClient = NO;
+    NSString *className = isShowClient?@"ClientViewController":@"ServerViewController";
+    Class class = NSClassFromString(className);
+    UIViewController *vc = [(UIViewController *)[class alloc] initWithNibName:className bundle:nil];
     self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
 
     return YES;
 }

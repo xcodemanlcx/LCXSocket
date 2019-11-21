@@ -9,6 +9,9 @@
 #import "ClientViewController.h"
 #import "SocketClient.h"
 
+#define kWeakSelf  __weak typeof(self) weakSelf = self
+#define kStrongSelf __strong typeof(weakSelf) strongSelf = weakSelf
+
 @interface ClientViewController ()
 
 //UI
@@ -19,86 +22,92 @@
 @property (weak, nonatomic) IBOutlet UITextField *sendMessageTextField;
 @property (weak, nonatomic) IBOutlet UITextView *messageTextView;
 
+//socket
+@property (nonatomic ,strong) SocketClient *socketClient;
+@property (nonatomic ,strong) NSTimer *longConnectTimer;
+
 @end
 
 @implementation ClientViewController
 
-{
-    //socket
-    SocketClient *_socketClient;
-    NSTimer *_connectTimer;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [_connectButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
+    [_connectButton setTitle:@"连接断开" forState:UIControlStateSelected];
+}
+
+#pragma mark - Lazy loading:Socket、timer
+
+- (SocketClient *)socketClient{
+    if (_socketClient) return _socketClient;
+    
+    //1 创建socket客户端
+    _socketClient =[[SocketClient alloc] initWithQueue:dispatch_get_main_queue()];
+    
+    //2.1 设置连接回调-连接成功
+    kWeakSelf;
+    _socketClient.socketConnect = ^(GCDAsyncSocket * _Nonnull sock, NSString * _Nonnull host, uint16_t port) {
+        kStrongSelf;
+        [strongSelf showMessageWithStr:[NSString stringWithFormat:@"连接成功-服务器IP: %@,端口: %d", host,port]];
+        // 建立心跳连接
+        [strongSelf longConnectTimer];
+    };
+    //2.2 设置连接回调-读取数据
+    _socketClient.socketReadData = ^(GCDAsyncSocket * _Nonnull sock, NSData * _Nonnull data, long tag) {
+        NSString *text = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        [weakSelf showMessageWithStr:text];
+    };
+    //2.3 设置连接回调-连接断开
+    _socketClient.socketDisconnect = ^(GCDAsyncSocket * _Nonnull sock, NSError * _Nonnull err) {
+        kStrongSelf;
+        strongSelf.sendButton.selected = NO;
+        [strongSelf.longConnectTimer invalidate];
+        strongSelf.longConnectTimer = nil;
+        [strongSelf showMessageWithStr:@"连接断开"];
+    };
+    
+    return _socketClient;
+}
+
+- (NSTimer *)longConnectTimer{
+    if (_longConnectTimer) return _longConnectTimer;
+    _longConnectTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(longConnectTimerAction) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_longConnectTimer forMode:NSRunLoopCommonModes];
+    return _longConnectTimer;
 }
 
 #pragma mark - Action
 
-- (IBAction)connectAction:(id)sender {
-    if (!_socketClient.isConnected)
+- (IBAction)connectAction:(UIButton *)sender {
+    if (sender.selected == NO)
     {
-        //1 创建socket客户端
-        _socketClient =[[SocketClient alloc] initWithQueue:dispatch_get_main_queue()];
-        
-        //2.1 设置连接回调-连接成功
-        __weak typeof(self) weakSelf = self;
-        _socketClient.socketConnect = ^(GCDAsyncSocket * _Nonnull sock, NSString * _Nonnull host, uint16_t port) {
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            [strongSelf showMessageWithStr:[NSString stringWithFormat:@"连接成功-服务器IP: %@,端口: %d", host,port]];
-            // 连接成功,建立心跳连接
-            [strongSelf addTimer];
-        };
-        //2.2 设置连接回调-读取数据
-        _socketClient.socketReadData = ^(GCDAsyncSocket * _Nonnull sock, NSData * _Nonnull data, long tag) {
-            NSString *text = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            [weakSelf showMessageWithStr:text];
-        };
-        //2.3 设置连接回调-断开连接
-        _socketClient.socketDisConnect = ^(GCDAsyncSocket * _Nonnull sock, NSError * _Nonnull err) {
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            [strongSelf showMessageWithStr:@"断开连接"];
-            [strongSelf->_connectTimer invalidate];
-            strongSelf->_connectTimer = nil;
-        };
-        
-        //3 开始连接
-        [_socketClient connectToHost:self.addressTextField.text port:self.portTextField.text.integerValue];
-        
-        //开始连接后的提示
-        [self showMessageWithStr:_socketClient.isConnected?@"客户端尝试连接":@"客户端未创建连接"];
+        //建立连接
+        sender.selected = [self.socketClient connectToHost:_addressTextField.text port:_portTextField.text.integerValue];
+        [self showMessageWithStr:sender.selected?@"客户端尝试连接":@"客户端未创建连接"];
     }else{
-        [self showMessageWithStr:@"与服务器连接已建立"];
+        [_socketClient disconnect];
+        _socketClient = nil;
+        sender.selected = NO;
     }
 }
 
 - (IBAction)sendMessageAction:(id)sender {
-    NSData *data = [self.sendMessageTextField.text dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [_sendMessageTextField.text dataUsingEncoding:NSUTF8StringEncoding];
     [_socketClient writeData:data];
 }
-
-- (IBAction)disconnectAction:(id)sender {
-    [_socketClient disconnect];
-}
-
 
 - (void)longConnectTimerAction
 {
     // 发送固定格式的数据
     float version = [[UIDevice currentDevice] systemVersion].floatValue;
-    NSString *longConnect = [NSString stringWithFormat:@"固定格式数据:%f",version];
+    NSString *longConnect = [NSString stringWithFormat:@"固定格式数据:%1.f",version];
     NSData  *data = [longConnect dataUsingEncoding:NSUTF8StringEncoding];
     [_socketClient writeData:data];
 }
-#pragma mark - other
 
-// 长连接定时器
-- (void)addTimer
-{
-    _connectTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(longConnectTimerAction) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:_connectTimer forMode:NSRunLoopCommonModes];
-}
+#pragma mark - other
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
@@ -107,7 +116,7 @@
 
 - (void)showMessageWithStr:(NSString *)str
 {
-    self.messageTextView.text = [self.messageTextView.text stringByAppendingFormat:@"%@\n", str];
+    _messageTextView.text = [_messageTextView.text stringByAppendingFormat:@"%@\n", str];
 }
 /*
 #pragma mark - Navigation

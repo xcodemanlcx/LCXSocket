@@ -8,6 +8,10 @@
 
 #import "SocketClient.h"
 
+@interface SocketClient ()<GCDAsyncSocketDelegate>
+
+@end
+
 @implementation SocketClient
 
 #pragma mark - GCDAsyncSocket
@@ -20,13 +24,14 @@
     return self;
 }
 
-- (void)connectToHost:(NSString *)host port:(UInt16)port{
-    if (!_clientSocket) return;
+- (BOOL)connectToHost:(NSString *)host port:(UInt16)port{
+    if (!_clientSocket) return NO;
     
     _host = host;
     _port = port;
     NSError *error = nil;
-    _isConnected = [_clientSocket connectToHost:host onPort:port withTimeout:-1 error:&error];
+    BOOL result = [_clientSocket connectToHost:host onPort:port withTimeout:-1 error:&error];
+    return (result && error == nil);
 }
 
 - (void)writeData:(NSData *)data {
@@ -35,7 +40,7 @@
 
     // withTimeout -1 : 无穷大,一直等
     // tag : 消息标记
-    [_clientSocket  writeData:data withTimeout:-1 tag:1];
+    [_clientSocket  writeData:data withTimeout:-1 tag:0];
 }
 
 - (void)disconnect {
@@ -46,29 +51,36 @@
 
 #pragma mark - GCDAsyncSocketDelegate
 
+//连接成功
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port{
-    _isConnected = YES;
     if (_socketConnect) {
         _socketConnect(sock,host,port);
     }
-    //读取数据
-    [_clientSocket  readDataWithTimeout:-1 tag:1];
+    //读取消息
+    [_clientSocket  readDataWithTimeout:-1 tag:0];
 }
 
+//接收信息
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
     if (_socketReadData) {
         _socketReadData(sock,data,tag);
     }
     //再次读取
-    [_clientSocket  readDataWithTimeout:- 1 tag:1];
+    [_clientSocket  readDataWithTimeout:- 1 tag:0];
 }
 
+/*?
+- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
+    [_clientSocket readDataWithTimeout:-1 tag:0];
+}
+*/
+
+//连接断开
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
-    _isConnected = NO;
-    _clientSocket .delegate = nil;
+    _clientSocket.delegate = nil;
     _clientSocket  = nil;
-    if (_socketDisConnect) {
-        _socketDisConnect(sock,err);
+    if (_socketDisconnect) {
+        _socketDisconnect(sock,err);
     }
 }
 @end
