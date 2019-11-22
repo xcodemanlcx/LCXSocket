@@ -1,6 +1,6 @@
 # LCXSocket
 ### 前言
-* 使用CocoaAsynSocket实现多个客户端与一个服务端的通信；使用block封装CocoaAsynSocketDelegate；且对GCDAsyncSocket业务，分别完全封装了客户端和服务端；
+* 使用CocoaAsynSocket实现多个客户端与一个服务端的通信；使用block封装GCDAsyncSocketDelegate；且对GCDAsyncSocket业务，分别完全封装了客户端和服务端；
 * 测试说明：
 1.必须在同一网络下；
 2.可使用多个iPhone模拟器或者多个真机进行测试，
