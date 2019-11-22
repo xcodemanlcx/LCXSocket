@@ -2,6 +2,6 @@
 
 target 'LCXSocket' do
 
-pod 'KVOController'
+pod 'CocoaAsyncSocket'
 
 end
