@@ -61,6 +61,9 @@
     if (_socketDisconnect) {
         _socketDisconnect(sock,err);
     }
+    if ([_clientSockets containsObject:sock]) {
+            [_clientSockets removeObject:sock];
+    }
 }
 
 @end

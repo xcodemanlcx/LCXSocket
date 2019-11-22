@@ -3,242 +3,204 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0629EA30CA52B7183C88320DE4D8C62B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B655093DDCC0176DEAC903ABA8E76527 /* Foundation.framework */; };
-		0EC1806437F66CC12F06DD7ACD1FBA4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5359E8FB322457653E676483AB72D7B1 /* Security.framework */; };
-		14703875367641811BD5FE75ACD67C96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B655093DDCC0176DEAC903ABA8E76527 /* Foundation.framework */; };
-		1F292B5410B16DBF60D1F47A48216622 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC814063E47992E7A90FA41688C2A454 /* CFNetwork.framework */; };
-		2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C237B7AA6F4A2DD17CA05EB90C83362 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */; };
-		BF0E4454B28437897BC092AE02CD0C13 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C08A9CB11B5A00E58CF92406169618BB /* Pods-LCXSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A04A476884689097DE22AD3C6DA66DEE /* Pods-LCXSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E07BA194D740F08C5E0612C22D531094 /* Pods-LCXSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB825A0DE930D985E491864FC2B58344 /* Pods-LCXSocket-dummy.m */; };
+		017E1C10BC5AC99CFA31889BF9804C69 /* NSObject+FBKVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = 530825CAABD46B8AE93565AF7706CEC3 /* NSObject+FBKVOController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		06FF16C7FE2AB7EE905AD0EB6AEF45CC /* FBKVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C43ACA310D288FC7A60E974B496C422 /* FBKVOController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E37DCC34A85332E4D9A5B02FA0814F2 /* Pods-LCXSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9543374229DDD7CED27992B53D6C41FC /* Pods-LCXSocket-dummy.m */; };
+		89D4278D3C9EC2FA37D50ED85C0DE54C /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64095EE00FF59D88B365563C0276C2DB /* FBKVOController.m */; };
+		A6A35EDA20210DC9BFB5D678DFB285A2 /* KVOController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2ABBE4A31F8056E0ADBB80651ADE38A /* KVOController-dummy.m */; };
+		C05161E9314F04C1F11FA154B6BED06E /* KVOController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84D9EEBDBF8055F243A27E37BF5AEDA2 /* KVOController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C821C635376C0778987EB83E729528E6 /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA82205F747B66F607489453BC89D2F /* NSObject+FBKVOController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		58F3B1984CF2521A376B8568E52E8E83 /* PBXContainerItemProxy */ = {
+		BE47AE673D3009A1AE65E04657B8C2CF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
-			remoteInfo = CocoaAsyncSocket;
+			remoteGlobalIDString = 2568F753F09C4DFFD8770DCC78EDAEAE;
+			remoteInfo = KVOController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05D394B4A145C8A213784CC7AEB11219 /* Pods-LCXSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LCXSocket.debug.xcconfig"; sourceTree = "<group>"; };
-		12D2BC450C4A6B05397075508D93D9CE /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
-		23F2C6C657A10947C54731440B1DE72B /* Pods-LCXSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LCXSocket-Info.plist"; sourceTree = "<group>"; };
-		28D8A5D6099279D3A14DACCCD1B0B983 /* Pods-LCXSocket-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LCXSocket-frameworks.sh"; sourceTree = "<group>"; };
-		5359E8FB322457653E676483AB72D7B1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
-		8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		8F603EFE32B094C7EE3B2E04544B010D /* Pods_LCXSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LCXSocket.framework; path = "Pods-LCXSocket.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		951FB3E586FF0D72C957E41ED163F2E9 /* Pods-LCXSocket-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LCXSocket-acknowledgements.plist"; sourceTree = "<group>"; };
-		99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		0C43ACA310D288FC7A60E974B496C422 /* FBKVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBKVOController.h; path = FBKVOController/FBKVOController.h; sourceTree = "<group>"; };
+		0C6752A553E3747C0026B5611C5A2687 /* Pods-LCXSocket-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LCXSocket-acknowledgements.plist"; sourceTree = "<group>"; };
+		0F491B57581EC89AE5360A2058F68451 /* KVOController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVOController-prefix.pch"; sourceTree = "<group>"; };
+		399EC9508E73C0D54D9BBD8741FBA137 /* libKVOController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKVOController.a; path = libKVOController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A150614B95736FCFF022C8E858D0C3C /* Pods-LCXSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LCXSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		530825CAABD46B8AE93565AF7706CEC3 /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+FBKVOController.h"; path = "FBKVOController/NSObject+FBKVOController.h"; sourceTree = "<group>"; };
+		64095EE00FF59D88B365563C0276C2DB /* FBKVOController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBKVOController.m; path = FBKVOController/FBKVOController.m; sourceTree = "<group>"; };
+		84D9EEBDBF8055F243A27E37BF5AEDA2 /* KVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVOController.h; path = FBKVOController/KVOController.h; sourceTree = "<group>"; };
+		8F603EFE32B094C7EE3B2E04544B010D /* libPods-LCXSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LCXSocket.a"; path = "libPods-LCXSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9543374229DDD7CED27992B53D6C41FC /* Pods-LCXSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LCXSocket-dummy.m"; sourceTree = "<group>"; };
+		9B7F61ADABF26A5F063BF3CC7E1DE07D /* Pods-LCXSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LCXSocket.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A04A476884689097DE22AD3C6DA66DEE /* Pods-LCXSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LCXSocket-umbrella.h"; sourceTree = "<group>"; };
-		A057C035B683A28F766F17837C08F719 /* Pods-LCXSocket-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LCXSocket-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		A730B1079DFF6DAF1ABE487DB468EF2D /* Pods-LCXSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LCXSocket.modulemap"; sourceTree = "<group>"; };
-		A905023E6DEC0CB3ACF18BC768C59C2E /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
-		AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		B655093DDCC0176DEAC903ABA8E76527 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CAB78BEE8676F1686578FF6B24FB5170 /* Pods-LCXSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LCXSocket.release.xcconfig"; sourceTree = "<group>"; };
-		CC814063E47992E7A90FA41688C2A454 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		DEA17E24F689BAD69B80C9E2639F6EE9 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
-		E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
-		EB825A0DE930D985E491864FC2B58344 /* Pods-LCXSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LCXSocket-dummy.m"; sourceTree = "<group>"; };
+		B0E625B16D48098D51F85F32E00EB810 /* Pods-LCXSocket-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LCXSocket-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B2ABBE4A31F8056E0ADBB80651ADE38A /* KVOController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KVOController-dummy.m"; sourceTree = "<group>"; };
+		E1EE7E767BC007B315736CBC6BEFEDA9 /* KVOController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVOController.xcconfig; sourceTree = "<group>"; };
+		EDA82205F747B66F607489453BC89D2F /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FBKVOController.m"; path = "FBKVOController/NSObject+FBKVOController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		160EF26C734A27A9436CAB7143AF8F15 /* Frameworks */ = {
+		6FEBCB36AB21D1A433E15E23D3F493D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20386C4BEBA1CEA6E5EDB1669B7ADD76 /* CFNetwork.framework in Frameworks */,
-				14703875367641811BD5FE75ACD67C96 /* Foundation.framework in Frameworks */,
-				0EC1806437F66CC12F06DD7ACD1FBA4A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D92C25D84650255BB664E9A2DA0C99D1 /* Frameworks */ = {
+		B14A2FBB0E253E068B8F77A5005CC848 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0629EA30CA52B7183C88320DE4D8C62B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+		7FEE60A3FCFB6708556888F9079C93D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDB0DD9DF2184EAAFFD00F527DE67764 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		747624886BBF98024D1D1D461624D591 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */,
-				8F603EFE32B094C7EE3B2E04544B010D /* Pods_LCXSocket.framework */,
+				399EC9508E73C0D54D9BBD8741FBA137 /* libKVOController.a */,
+				8F603EFE32B094C7EE3B2E04544B010D /* libPods-LCXSocket.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A49791B92A7781B859EAEEF581EE6D8B /* CocoaAsyncSocket */ = {
+		8D66F365D7FA553532AA38179935D408 /* Pods-LCXSocket */ = {
 			isa = PBXGroup;
 			children = (
-				8DA293C446B580EEC70F631B729C1078 /* GCDAsyncSocket.h */,
-				6D0D9393A92083DA9D32F56244F48A39 /* GCDAsyncSocket.m */,
-				AA5A665204A6EB0247240DDA87819CB4 /* GCDAsyncUdpSocket.h */,
-				A64404F0A4CC1801E1409DF393AB248B /* GCDAsyncUdpSocket.m */,
-				B862B4264C2F1D9F87C12772C46C54AE /* Support Files */,
-			);
-			name = CocoaAsyncSocket;
-			path = CocoaAsyncSocket;
-			sourceTree = "<group>";
-		};
-		B4DF20DF317C4F5205EDB7245D012EC5 /* Pods-LCXSocket */ = {
-			isa = PBXGroup;
-			children = (
-				A730B1079DFF6DAF1ABE487DB468EF2D /* Pods-LCXSocket.modulemap */,
-				A057C035B683A28F766F17837C08F719 /* Pods-LCXSocket-acknowledgements.markdown */,
-				951FB3E586FF0D72C957E41ED163F2E9 /* Pods-LCXSocket-acknowledgements.plist */,
-				EB825A0DE930D985E491864FC2B58344 /* Pods-LCXSocket-dummy.m */,
-				28D8A5D6099279D3A14DACCCD1B0B983 /* Pods-LCXSocket-frameworks.sh */,
-				23F2C6C657A10947C54731440B1DE72B /* Pods-LCXSocket-Info.plist */,
-				A04A476884689097DE22AD3C6DA66DEE /* Pods-LCXSocket-umbrella.h */,
-				05D394B4A145C8A213784CC7AEB11219 /* Pods-LCXSocket.debug.xcconfig */,
-				CAB78BEE8676F1686578FF6B24FB5170 /* Pods-LCXSocket.release.xcconfig */,
+				B0E625B16D48098D51F85F32E00EB810 /* Pods-LCXSocket-acknowledgements.markdown */,
+				0C6752A553E3747C0026B5611C5A2687 /* Pods-LCXSocket-acknowledgements.plist */,
+				9543374229DDD7CED27992B53D6C41FC /* Pods-LCXSocket-dummy.m */,
+				3A150614B95736FCFF022C8E858D0C3C /* Pods-LCXSocket.debug.xcconfig */,
+				9B7F61ADABF26A5F063BF3CC7E1DE07D /* Pods-LCXSocket.release.xcconfig */,
 			);
 			name = "Pods-LCXSocket";
 			path = "Target Support Files/Pods-LCXSocket";
 			sourceTree = "<group>";
 		};
-		B862B4264C2F1D9F87C12772C46C54AE /* Support Files */ = {
+		B8DD561F598AD17ADE7977BA98A8E0DC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				12D2BC450C4A6B05397075508D93D9CE /* CocoaAsyncSocket.modulemap */,
-				85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */,
-				99BD1B356EA29219B7BDC08082938B68 /* CocoaAsyncSocket-dummy.m */,
-				DEA17E24F689BAD69B80C9E2639F6EE9 /* CocoaAsyncSocket-Info.plist */,
-				A905023E6DEC0CB3ACF18BC768C59C2E /* CocoaAsyncSocket-prefix.pch */,
-				E8773045111A5CD08ECF026E48421F3B /* CocoaAsyncSocket-umbrella.h */,
+				8D66F365D7FA553532AA38179935D408 /* Pods-LCXSocket */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/CocoaAsyncSocket";
-			sourceTree = "<group>";
-		};
-		BB2BDAA8DB999C491DAC5EAE1CFDC78F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A49791B92A7781B859EAEEF581EE6D8B /* CocoaAsyncSocket */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		BDB0DD9DF2184EAAFFD00F527DE67764 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CC814063E47992E7A90FA41688C2A454 /* CFNetwork.framework */,
-				B655093DDCC0176DEAC903ABA8E76527 /* Foundation.framework */,
-				5359E8FB322457653E676483AB72D7B1 /* Security.framework */,
-			);
-			name = iOS;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
-				BB2BDAA8DB999C491DAC5EAE1CFDC78F /* Pods */,
-				747624886BBF98024D1D1D461624D591 /* Products */,
-				F27F905AC434045CB8C9B5D29D87E680 /* Targets Support Files */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				F37D9E3DF4B7B276818A1977FF720682 /* Pods */,
+				7FEE60A3FCFB6708556888F9079C93D0 /* Products */,
+				B8DD561F598AD17ADE7977BA98A8E0DC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F27F905AC434045CB8C9B5D29D87E680 /* Targets Support Files */ = {
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4DF20DF317C4F5205EDB7245D012EC5 /* Pods-LCXSocket */,
 			);
-			name = "Targets Support Files";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAF2AE5FA11AB7639CFABEBCCC3017F2 /* KVOController */ = {
+			isa = PBXGroup;
+			children = (
+				0C43ACA310D288FC7A60E974B496C422 /* FBKVOController.h */,
+				64095EE00FF59D88B365563C0276C2DB /* FBKVOController.m */,
+				84D9EEBDBF8055F243A27E37BF5AEDA2 /* KVOController.h */,
+				530825CAABD46B8AE93565AF7706CEC3 /* NSObject+FBKVOController.h */,
+				EDA82205F747B66F607489453BC89D2F /* NSObject+FBKVOController.m */,
+				E455CDB0FF7CE84D7DDBCA79B6E3779B /* Support Files */,
+			);
+			name = KVOController;
+			path = KVOController;
+			sourceTree = "<group>";
+		};
+		E455CDB0FF7CE84D7DDBCA79B6E3779B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1EE7E767BC007B315736CBC6BEFEDA9 /* KVOController.xcconfig */,
+				B2ABBE4A31F8056E0ADBB80651ADE38A /* KVOController-dummy.m */,
+				0F491B57581EC89AE5360A2058F68451 /* KVOController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KVOController";
+			sourceTree = "<group>";
+		};
+		F37D9E3DF4B7B276818A1977FF720682 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAF2AE5FA11AB7639CFABEBCCC3017F2 /* KVOController */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		85D1EEFAA5AEC05A10EDC6E15B8FD21D /* Headers */ = {
+		1465A6993A0E2450085972F172CDB319 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08A9CB11B5A00E58CF92406169618BB /* Pods-LCXSocket-umbrella.h in Headers */,
+				06FF16C7FE2AB7EE905AD0EB6AEF45CC /* FBKVOController.h in Headers */,
+				C05161E9314F04C1F11FA154B6BED06E /* KVOController.h in Headers */,
+				017E1C10BC5AC99CFA31889BF9804C69 /* NSObject+FBKVOController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F82807D639FCFDF56A607D3970098A87 /* Headers */ = {
+		61B5BB6D8FD23CFDB9769C629BB2E809 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */,
-				DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */,
-				411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */ = {
+		2568F753F09C4DFFD8770DCC78EDAEAE /* KVOController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65B2BBD8991DD61ACE6737AADB85AB43 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildConfigurationList = 2F01552A42F1F96581CF64226060AC2C /* Build configuration list for PBXNativeTarget "KVOController" */;
 			buildPhases = (
-				F82807D639FCFDF56A607D3970098A87 /* Headers */,
-				398D9830C2C4A6872C9EEC588214E124 /* Sources */,
-				160EF26C734A27A9436CAB7143AF8F15 /* Frameworks */,
-				B7B5EDC45A81FF70431CFBFB2ABDFFEB /* Resources */,
+				1465A6993A0E2450085972F172CDB319 /* Headers */,
+				B8CBFA693B644A6942164FFC845C5EE2 /* Sources */,
+				B14A2FBB0E253E068B8F77A5005CC848 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CocoaAsyncSocket;
-			productName = CocoaAsyncSocket;
-			productReference = 6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */;
-			productType = "com.apple.product-type.framework";
+			name = KVOController;
+			productName = KVOController;
+			productReference = 399EC9508E73C0D54D9BBD8741FBA137 /* libKVOController.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		A3EBF15C2B8DC0EC94E9BDC9FDC874AD /* Pods-LCXSocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA303CCB4319A19437B7B354868F9158 /* Build configuration list for PBXNativeTarget "Pods-LCXSocket" */;
+			buildConfigurationList = 63D05EE26E3124976F6007B8C27E7470 /* Build configuration list for PBXNativeTarget "Pods-LCXSocket" */;
 			buildPhases = (
-				85D1EEFAA5AEC05A10EDC6E15B8FD21D /* Headers */,
-				881BF8733A5B79674CC4240A3AEF51C7 /* Sources */,
-				D92C25D84650255BB664E9A2DA0C99D1 /* Frameworks */,
-				49DCEA79D97488745CDA56E74CE29620 /* Resources */,
+				61B5BB6D8FD23CFDB9769C629BB2E809 /* Headers */,
+				F582276366289BF89DA548651DC6B87F /* Sources */,
+				6FEBCB36AB21D1A433E15E23D3F493D8 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E1A19515776799BFFD4971FB619A7934 /* PBXTargetDependency */,
+				134569394E516AC77582ECE5424C600E /* PBXTargetDependency */,
 			);
 			name = "Pods-LCXSocket";
 			productName = "Pods-LCXSocket";
-			productReference = 8F603EFE32B094C7EE3B2E04544B010D /* Pods_LCXSocket.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 8F603EFE32B094C7EE3B2E04544B010D /* libPods-LCXSocket.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -250,174 +212,96 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 747624886BBF98024D1D1D461624D591 /* Products */;
+			productRefGroup = 7FEE60A3FCFB6708556888F9079C93D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */,
+				2568F753F09C4DFFD8770DCC78EDAEAE /* KVOController */,
 				A3EBF15C2B8DC0EC94E9BDC9FDC874AD /* Pods-LCXSocket */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		49DCEA79D97488745CDA56E74CE29620 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7B5EDC45A81FF70431CFBFB2ABDFFEB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		398D9830C2C4A6872C9EEC588214E124 /* Sources */ = {
+		B8CBFA693B644A6942164FFC845C5EE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C237B7AA6F4A2DD17CA05EB90C83362 /* CocoaAsyncSocket-dummy.m in Sources */,
-				1F292B5410B16DBF60D1F47A48216622 /* GCDAsyncSocket.m in Sources */,
-				BF0E4454B28437897BC092AE02CD0C13 /* GCDAsyncUdpSocket.m in Sources */,
+				89D4278D3C9EC2FA37D50ED85C0DE54C /* FBKVOController.m in Sources */,
+				A6A35EDA20210DC9BFB5D678DFB285A2 /* KVOController-dummy.m in Sources */,
+				C821C635376C0778987EB83E729528E6 /* NSObject+FBKVOController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		881BF8733A5B79674CC4240A3AEF51C7 /* Sources */ = {
+		F582276366289BF89DA548651DC6B87F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E07BA194D740F08C5E0612C22D531094 /* Pods-LCXSocket-dummy.m in Sources */,
+				1E37DCC34A85332E4D9A5B02FA0814F2 /* Pods-LCXSocket-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E1A19515776799BFFD4971FB619A7934 /* PBXTargetDependency */ = {
+		134569394E516AC77582ECE5424C600E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 58F3B1984CF2521A376B8568E52E8E83 /* PBXContainerItemProxy */;
+			name = KVOController;
+			target = 2568F753F09C4DFFD8770DCC78EDAEAE /* KVOController */;
+			targetProxy = BE47AE673D3009A1AE65E04657B8C2CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		592F82595130054D34C835DDA220684A /* Release */ = {
+		02C67C9D9606737BE03B04D06B138E87 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */;
+			baseConfigurationReference = E1EE7E767BC007B315736CBC6BEFEDA9 /* KVOController.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
-				PRODUCT_NAME = CocoaAsyncSocket;
+				GCC_PREFIX_HEADER = "Target Support Files/KVOController/KVOController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KVOController;
+				PRODUCT_NAME = KVOController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		72EB44E47CDEB7F01C4F8FFBD9FD9BF6 /* Debug */ = {
+		03892EA0C41DB7C27E07722F3CDB015E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85B686CFAB542400135ACE0C23847EBF /* CocoaAsyncSocket.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
-				PRODUCT_NAME = CocoaAsyncSocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8ECFE9C445835F832C8575DE7E02588F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05D394B4A145C8A213784CC7AEB11219 /* Pods-LCXSocket.debug.xcconfig */;
+			baseConfigurationReference = 3A150614B95736FCFF022C8E858D0C3C /* Pods-LCXSocket.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LCXSocket/Pods-LCXSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LCXSocket/Pods-LCXSocket.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -545,47 +429,63 @@
 			};
 			name = Debug;
 		};
-		D7925C631DE288B0373835A8D3EEFD15 /* Release */ = {
+		93B972A1F30CB2A3F7984164E164D5B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAB78BEE8676F1686578FF6B24FB5170 /* Pods-LCXSocket.release.xcconfig */;
+			baseConfigurationReference = E1EE7E767BC007B315736CBC6BEFEDA9 /* KVOController.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LCXSocket/Pods-LCXSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				GCC_PREFIX_HEADER = "Target Support Files/KVOController/KVOController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = KVOController;
+				PRODUCT_NAME = KVOController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFB6A47F61FE5FC869C136B654EA73F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B7F61ADABF26A5F063BF3CC7E1DE07D /* Pods-LCXSocket.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LCXSocket/Pods-LCXSocket.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2F01552A42F1F96581CF64226060AC2C /* Build configuration list for PBXNativeTarget "KVOController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B972A1F30CB2A3F7984164E164D5B9 /* Debug */,
+				02C67C9D9606737BE03B04D06B138E87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -595,20 +495,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65B2BBD8991DD61ACE6737AADB85AB43 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+		63D05EE26E3124976F6007B8C27E7470 /* Build configuration list for PBXNativeTarget "Pods-LCXSocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				72EB44E47CDEB7F01C4F8FFBD9FD9BF6 /* Debug */,
-				592F82595130054D34C835DDA220684A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AA303CCB4319A19437B7B354868F9158 /* Build configuration list for PBXNativeTarget "Pods-LCXSocket" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8ECFE9C445835F832C8575DE7E02588F /* Debug */,
-				D7925C631DE288B0373835A8D3EEFD15 /* Release */,
+				03892EA0C41DB7C27E07722F3CDB015E /* Debug */,
+				EFB6A47F61FE5FC869C136B654EA73F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

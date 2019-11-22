@@ -67,7 +67,6 @@
     //2.3 连接断开
     _socketServer.socketDisconnect = ^(GCDAsyncSocket * _Nonnull sock, NSError * _Nonnull err) {
         kStrongSelf;
-        strongSelf.startListenButton.selected = NO;
         [strongSelf showMessageWithStr:@"连接断开"];
     };
     return _socketServer;
@@ -108,6 +107,9 @@
         }
     }else{
         [_socketServer stopService];
+        [_longConnectTimer invalidate];
+        _longConnectTimer = nil;
+        _socketServer = nil;
         sender.selected = NO;
     }
 }

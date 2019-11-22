@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextField *portTextField;
 @property (weak, nonatomic) IBOutlet UIButton *connectButton;
-@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (weak, nonatomic) IBOutlet UIButton * sendButton;
 @property (weak, nonatomic) IBOutlet UITextField *sendMessageTextField;
 @property (weak, nonatomic) IBOutlet UITextView *messageTextView;
 
@@ -62,9 +62,10 @@
     //2.3 设置连接回调-连接断开
     _socketClient.socketDisconnect = ^(GCDAsyncSocket * _Nonnull sock, NSError * _Nonnull err) {
         kStrongSelf;
-        strongSelf.sendButton.selected = NO;
+        strongSelf.connectButton.selected = NO;
         [strongSelf.longConnectTimer invalidate];
         strongSelf.longConnectTimer = nil;
+        strongSelf.socketClient = nil;
         [strongSelf showMessageWithStr:@"连接断开"];
     };
     
