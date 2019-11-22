@@ -3,5 +3,6 @@
 target 'LCXSocket' do
 
 pod 'CocoaAsyncSocket' 
+pod 'KVOController'
 
 end

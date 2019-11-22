@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070CBC2B238786060013D145 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070CBC29238786060013D145 /* HomeViewController.m */; };
+		070CBC2C238786060013D145 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070CBC2A238786060013D145 /* HomeViewController.xib */; };
 		07A4654023862D7800D185A7 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4653E23862D7800D185A7 /* ServerViewController.m */; };
 		07A4654123862D7800D185A7 /* ServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A4653F23862D7800D185A7 /* ServerViewController.xib */; };
 		07A46544238631E500D185A7 /* SocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A46543238631E500D185A7 /* SocketServer.m */; };
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070CBC28238786060013D145 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		070CBC29238786060013D145 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		070CBC2A238786060013D145 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		07A4653D23862D7800D185A7 /* ServerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
 		07A4653E23862D7800D185A7 /* ServerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
 		07A4653F23862D7800D185A7 /* ServerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServerViewController.xib; sourceTree = "<group>"; };
@@ -152,6 +157,9 @@
 			children = (
 				36992B672382DDC000D527A5 /* AppDelegate.h */,
 				36992B682382DDC000D527A5 /* AppDelegate.m */,
+				070CBC28238786060013D145 /* HomeViewController.h */,
+				070CBC29238786060013D145 /* HomeViewController.m */,
+				070CBC2A238786060013D145 /* HomeViewController.xib */,
 				3613EB892385848D00B2C1B2 /* Client */,
 				07A4653C23862BFB00D185A7 /* Server */,
 				36992B6A2382DDC000D527A5 /* ViewController.h */,
@@ -283,7 +291,7 @@
 				};
 			};
 			buildConfigurationList = 36992B5F2382DDC000D527A5 /* Build configuration list for PBXProject "LCXSocket" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -312,6 +320,7 @@
 				36992B6F2382DDC000D527A5 /* Main.storyboard in Resources */,
 				07A4654123862D7800D185A7 /* ServerViewController.xib in Resources */,
 				3613EB9723858A4200B2C1B2 /* ClientViewController.xib in Resources */,
+				070CBC2C238786060013D145 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +394,7 @@
 				07A4654023862D7800D185A7 /* ServerViewController.m in Sources */,
 				36992B692382DDC000D527A5 /* AppDelegate.m in Sources */,
 				3613EB9623858A4200B2C1B2 /* ClientViewController.m in Sources */,
+				070CBC2B238786060013D145 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

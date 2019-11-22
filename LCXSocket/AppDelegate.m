@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,12 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-// isShowClient:YES 客户端，NO 服务端
-    BOOL isShowClient = NO;
-    NSString *className = isShowClient?@"ClientViewController":@"ServerViewController";
-    Class class = NSClassFromString(className);
-    UIViewController *vc = [(UIViewController *)[class alloc] initWithNibName:className bundle:nil];
-    self.window.rootViewController = vc;
+    HomeViewController *vc = [[HomeViewController  alloc] initWithNibName:@"HomeViewController" bundle:nil];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
 
     return YES;
 }

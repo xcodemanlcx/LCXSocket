@@ -57,12 +57,6 @@
     [sock readDataWithTimeout:- 1 tag:0];
 }
 
-/* ?
-- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
-    [sock readDataWithTimeout:-1 tag:0];
-}
- */
-
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err {
     if (_socketDisconnect) {
         _socketDisconnect(sock,err);

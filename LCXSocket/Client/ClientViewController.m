@@ -33,9 +33,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.navigationItem.title = @"客户端";
     [_connectButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-    [_connectButton setTitle:@"连接断开" forState:UIControlStateSelected];
+    [_connectButton setTitle:@"断开连接" forState:UIControlStateSelected];
 }
 
 #pragma mark - Lazy loading:Socket、timer
@@ -101,8 +101,7 @@
 - (void)longConnectTimerAction
 {
     // 发送固定格式的数据
-    float version = [[UIDevice currentDevice] systemVersion].floatValue;
-    NSString *longConnect = [NSString stringWithFormat:@"固定格式数据:%1.f",version];
+    NSString *longConnect = [NSString stringWithFormat:@"固定格式数据，系统版本:%.2f",[[UIDevice currentDevice] systemVersion].floatValue];
     NSData  *data = [longConnect dataUsingEncoding:NSUTF8StringEncoding];
     [_socketClient writeData:data];
 }

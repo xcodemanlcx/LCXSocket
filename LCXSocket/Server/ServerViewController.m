@@ -39,6 +39,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.navigationItem.title = @"服务端";
+
     _clientPhoneTimeDict = @{}.mutableCopy;
     [_startListenButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     [_startListenButton setTitle:@"停止服务" forState:UIControlStateSelected];
@@ -54,7 +57,7 @@
     //2.1 接受连接成功
     _socketServer.socketAccept = ^(GCDAsyncSocket * _Nonnull sock, GCDAsyncSocket * _Nonnull newSocket) {
         kStrongSelf;
-        [strongSelf showMessageWithStr:[NSString stringWithFormat:@"接受连接成功,客户端的地址: %@-端口: %d", newSocket.connectedHost, newSocket.connectedPort]];
+        [strongSelf showMessageWithStr:[NSString stringWithFormat:@"连接成功,客户端的地址: %@-端口: %d", newSocket.connectedHost, newSocket.connectedPort]];
         [strongSelf longConnectTimer];
     };
     //2.2 读取消息
@@ -90,7 +93,7 @@
             [self showMessageWithStr:[NSString stringWithFormat:@"移除%@",key]];
             [_clientPhoneTimeDict removeObjectForKey:key];
         } else{
-            [self showMessageWithStr:[NSString stringWithFormat:@"%@处于连接状态,连接时差%.2f",key,[currentTimeStr doubleValue] - [obj doubleValue]]];
+            [self showMessageWithStr:[NSString stringWithFormat:@"%@处于连接状态,连接时差%f",key,[currentTimeStr doubleValue] - [obj doubleValue]]];
         }
     }];
 }
@@ -137,7 +140,7 @@
 {
     NSDate* date = [NSDate dateWithTimeIntervalSinceNow:0];
     NSTimeInterval currentTime = [date timeIntervalSince1970];
-    NSString *currentTimeStr = [NSString stringWithFormat:@"%.0f", currentTime];
+    NSString *currentTimeStr = [NSString stringWithFormat:@"%f", currentTime];
     return currentTimeStr;
 }
 

@@ -69,12 +69,6 @@
     [_clientSocket  readDataWithTimeout:- 1 tag:0];
 }
 
-/*?
-- (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag {
-    [_clientSocket readDataWithTimeout:-1 tag:0];
-}
-*/
-
 //连接断开
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
     _clientSocket.delegate = nil;
