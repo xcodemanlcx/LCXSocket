@@ -45,8 +45,8 @@
 
 - (void)disconnect {
     if (!_clientSocket) return;
-    
-        [_clientSocket  disconnect];
+
+    [_clientSocket  disconnect];
 }
 
 #pragma mark - GCDAsyncSocketDelegate
@@ -71,10 +71,11 @@
 
 //连接断开
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
-    _clientSocket.delegate = nil;
-    _clientSocket  = nil;
+
     if (_socketDisconnect) {
         _socketDisconnect(sock,err);
     }
+    _clientSocket.delegate = nil;
+    _clientSocket  = nil;
 }
 @end
