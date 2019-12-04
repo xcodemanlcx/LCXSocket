@@ -82,7 +82,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="244.92753623188409" y="134.59821428571428"/>
+            <point key="canvasLocation" x="-112" y="122"/>
         </view>
     </objects>
 </document>
